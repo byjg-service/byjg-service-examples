@@ -1,0 +1,18 @@
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\CEPSample.Form1.resources
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\CEPSample.Properties.Resources.resources
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\CEPSample.csproj.GenerateResource.Cache
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\bin\Debug\CEPSample.exe.config
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\bin\Debug\CEPSample.exe
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\bin\Debug\CEPSample.pdb
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\CEPSample.exe
+C:\Documents and Settings\jg\Meus documentos\Visual Studio 2008\Projects\CEPSample\CEPSample\obj\Debug\CEPSample.pdb
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\bin\Debug\CEPSample.exe.config
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\CEPSample.exe
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\CEPSample.pdb
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\bin\Debug\CEPSample.exe
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\bin\Debug\CEPSample.pdb
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\CEPSample.Form1.resources
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\CEPSample.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\CEPSample\CEPSample\obj\Debug\CEPSample.csproj.GenerateResource.Cache

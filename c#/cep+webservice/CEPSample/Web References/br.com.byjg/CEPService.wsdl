@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="urn:CEPService" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="CEPService" targetNamespace="urn:CEPService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:CEPService">
+      <xsd:complexType name="ArrayOfstring">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="obterVersao" />
+  <wsdl:message name="obterVersaoResponse">
+    <wsdl:part name="obterVersaoResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterLogradouro">
+    <wsdl:part name="cep" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterLogradouroResponse">
+    <wsdl:part name="obterLogradouroResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterLogradouroAuth">
+    <wsdl:part name="cep" type="xsd:string" />
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterLogradouroAuthResponse">
+    <wsdl:part name="obterLogradouroAuthResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterCEP">
+    <wsdl:part name="logradouro" type="xsd:string" />
+    <wsdl:part name="localidade" type="xsd:string" />
+    <wsdl:part name="UF" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterCEPResponse">
+    <wsdl:part name="obterCEPResponse" type="typens:ArrayOfstring" />
+  </wsdl:message>
+  <wsdl:message name="obterCEPAuth">
+    <wsdl:part name="logradouro" type="xsd:string" />
+    <wsdl:part name="localidade" type="xsd:string" />
+    <wsdl:part name="UF" type="xsd:string" />
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obterCEPAuthResponse">
+    <wsdl:part name="obterCEPAuthResponse" type="typens:ArrayOfstring" />
+  </wsdl:message>
+  <wsdl:portType name="CEPServicePort">
+    <wsdl:operation name="obterVersao">
+      <documentation>Retorna a versao do WebService</documentation>
+      <wsdl:input message="typens:obterVersao" />
+      <wsdl:output message="typens:obterVersaoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterLogradouro">
+      <documentation>Retorna o nome do logradouro à partir do CEP fornecido. Esse método será desativado em 30 de Outubro de 2008.</documentation>
+      <wsdl:input message="typens:obterLogradouro" />
+      <wsdl:output message="typens:obterLogradouroResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterLogradouroAuth">
+      <documentation>Retorna o nome do logradouro à partir do CEP fornecido. Esse método requer autenticação do usuário.</documentation>
+      <wsdl:input message="typens:obterLogradouroAuth" />
+      <wsdl:output message="typens:obterLogradouroAuthResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterCEP">
+      <documentation>Retorna o CEP à partir do nome do logradouro, localidade e unidade federativa. Atenção: Somente serão retornadas as 5 primeiras linhas. Esse método será desativado em 30 de Outubro de 2008.</documentation>
+      <wsdl:input message="typens:obterCEP" />
+      <wsdl:output message="typens:obterCEPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterCEPAuth">
+      <documentation>Retorna o CEP à partir do nome do logradouro, localidade e unidade federativa. Esse método requer autenticação de usuário. Se autenticado, retorna as 20 primeiras linhas encontradas.</documentation>
+      <wsdl:input message="typens:obterCEPAuth" />
+      <wsdl:output message="typens:obterCEPAuthResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CEPServiceBinding" type="typens:CEPServicePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="obterVersao">
+      <soap:operation soapAction="urn:CEPServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterLogradouro">
+      <soap:operation soapAction="urn:CEPServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterLogradouroAuth">
+      <soap:operation soapAction="urn:CEPServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterCEP">
+      <soap:operation soapAction="urn:CEPServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterCEPAuth">
+      <soap:operation soapAction="urn:CEPServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:http://www.byjg.com.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CEPService">
+    <wsdl:port name="CEPServicePort" binding="typens:CEPServiceBinding">
+      <soap:address location="http://www.byjg.com.br/site/webservice.php/ws/cep" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
