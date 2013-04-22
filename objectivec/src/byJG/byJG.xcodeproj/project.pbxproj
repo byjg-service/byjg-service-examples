@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B6DCCF713FE8BA0003F250F /* byjg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DCCF613FE8BA0003F250F /* byjg.png */; };
+		7B84F24313FDB6FF0096E5FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84F24213FDB6FF0096E5FC /* UIKit.framework */; };
+		7B84F24513FDB6FF0096E5FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84F24413FDB6FF0096E5FC /* Foundation.framework */; };
+		7B84F24713FDB6FF0096E5FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84F24613FDB6FF0096E5FC /* CoreGraphics.framework */; };
+		7B84F24D13FDB6FF0096E5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B84F24B13FDB6FF0096E5FC /* InfoPlist.strings */; };
+		7B84F24F13FDB6FF0096E5FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F24E13FDB6FF0096E5FC /* main.m */; };
+		7B84F25313FDB6FF0096E5FC /* byJGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F25213FDB6FF0096E5FC /* byJGAppDelegate.m */; };
+		7B84F25613FDB6FF0096E5FC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B84F25413FDB6FF0096E5FC /* MainWindow.xib */; };
+		7B84F25913FDB6FF0096E5FC /* byJGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F25813FDB6FF0096E5FC /* byJGViewController.m */; };
+		7B84F25C13FDB6FF0096E5FC /* byJGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B84F25A13FDB6FF0096E5FC /* byJGViewController.xib */; };
+		7B84F26C13FDB7490096E5FC /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F26513FDB7490096E5FC /* Soap+Prefix.m */; };
+		7B84F26D13FDB7490096E5FC /* WSCEPArrayOfstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F26713FDB7490096E5FC /* WSCEPArrayOfstring.m */; };
+		7B84F26E13FDB7490096E5FC /* WSCEPCEPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F26913FDB7490096E5FC /* WSCEPCEPService.m */; };
+		7B84F26F13FDB7490096E5FC /* WSCEPServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F26B13FDB7490096E5FC /* WSCEPServices.m */; };
+		7B84F28E13FDB7550096E5FC /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27213FDB7550096E5FC /* NSData+Base64.m */; };
+		7B84F28F13FDB7550096E5FC /* NSMutableArray+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27413FDB7550096E5FC /* NSMutableArray+Soap.m */; };
+		7B84F29013FDB7550096E5FC /* Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27613FDB7550096E5FC /* Soap.m */; };
+		7B84F29113FDB7550096E5FC /* SoapArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27813FDB7550096E5FC /* SoapArray.m */; };
+		7B84F29213FDB7550096E5FC /* SoapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27B13FDB7550096E5FC /* SoapDictionary.m */; };
+		7B84F29313FDB7550096E5FC /* SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27D13FDB7550096E5FC /* SoapFault.m */; };
+		7B84F29413FDB7550096E5FC /* SoapHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F27F13FDB7550096E5FC /* SoapHandler.m */; };
+		7B84F29513FDB7550096E5FC /* SoapLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28113FDB7550096E5FC /* SoapLiteral.m */; };
+		7B84F29613FDB7550096E5FC /* SoapNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28313FDB7550096E5FC /* SoapNil.m */; };
+		7B84F29713FDB7550096E5FC /* SoapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28513FDB7550096E5FC /* SoapObject.m */; };
+		7B84F29813FDB7550096E5FC /* SoapParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28713FDB7550096E5FC /* SoapParameter.m */; };
+		7B84F29913FDB7550096E5FC /* SoapReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28913FDB7550096E5FC /* SoapReachability.m */; };
+		7B84F29A13FDB7550096E5FC /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28B13FDB7550096E5FC /* SoapRequest.m */; };
+		7B84F29B13FDB7550096E5FC /* SoapService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F28D13FDB7550096E5FC /* SoapService.m */; };
+		7B84F2AA13FDB7630096E5FC /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F29E13FDB7630096E5FC /* CXMLDocument.m */; };
+		7B84F2AB13FDB7630096E5FC /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F2A013FDB7630096E5FC /* CXMLDocument_PrivateExtensions.m */; };
+		7B84F2AC13FDB7630096E5FC /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F2A213FDB7630096E5FC /* CXMLElement.m */; };
+		7B84F2AD13FDB7630096E5FC /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F2A413FDB7630096E5FC /* CXMLNode.m */; };
+		7B84F2AE13FDB7630096E5FC /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F2A613FDB7630096E5FC /* CXMLNode_PrivateExtensions.m */; };
+		7B84F2AF13FDB7630096E5FC /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B84F2A813FDB7630096E5FC /* CXMLNode_XPathExtensions.m */; };
+		7B84F2B713FDB81C0096E5FC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84F2B613FDB81C0096E5FC /* SystemConfiguration.framework */; };
+		7B937D541400274F00A91B9D /* byjg_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B937D531400274F00A91B9D /* byjg_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B6DCCF613FE8BA0003F250F /* byjg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = byjg.png; sourceTree = "<group>"; };
+		7B84F23E13FDB6FF0096E5FC /* byJG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = byJG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B84F24213FDB6FF0096E5FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B84F24413FDB6FF0096E5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B84F24613FDB6FF0096E5FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B84F24A13FDB6FF0096E5FC /* byJG-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "byJG-Info.plist"; sourceTree = "<group>"; };
+		7B84F24C13FDB6FF0096E5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B84F24E13FDB6FF0096E5FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B84F25013FDB6FF0096E5FC /* byJG-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "byJG-Prefix.pch"; sourceTree = "<group>"; };
+		7B84F25113FDB6FF0096E5FC /* byJGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = byJGAppDelegate.h; sourceTree = "<group>"; };
+		7B84F25213FDB6FF0096E5FC /* byJGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = byJGAppDelegate.m; sourceTree = "<group>"; };
+		7B84F25513FDB6FF0096E5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7B84F25713FDB6FF0096E5FC /* byJGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = byJGViewController.h; sourceTree = "<group>"; };
+		7B84F25813FDB6FF0096E5FC /* byJGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = byJGViewController.m; sourceTree = "<group>"; };
+		7B84F25B13FDB6FF0096E5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/byJGViewController.xib; sourceTree = "<group>"; };
+		7B84F26413FDB7490096E5FC /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
+		7B84F26513FDB7490096E5FC /* Soap+Prefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Soap+Prefix.m"; sourceTree = "<group>"; };
+		7B84F26613FDB7490096E5FC /* WSCEPArrayOfstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCEPArrayOfstring.h; sourceTree = "<group>"; };
+		7B84F26713FDB7490096E5FC /* WSCEPArrayOfstring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCEPArrayOfstring.m; sourceTree = "<group>"; };
+		7B84F26813FDB7490096E5FC /* WSCEPCEPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCEPCEPService.h; sourceTree = "<group>"; };
+		7B84F26913FDB7490096E5FC /* WSCEPCEPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCEPCEPService.m; sourceTree = "<group>"; };
+		7B84F26A13FDB7490096E5FC /* WSCEPServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCEPServices.h; sourceTree = "<group>"; };
+		7B84F26B13FDB7490096E5FC /* WSCEPServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCEPServices.m; sourceTree = "<group>"; };
+		7B84F27113FDB7550096E5FC /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		7B84F27213FDB7550096E5FC /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		7B84F27313FDB7550096E5FC /* NSMutableArray+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Soap.h"; sourceTree = "<group>"; };
+		7B84F27413FDB7550096E5FC /* NSMutableArray+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Soap.m"; sourceTree = "<group>"; };
+		7B84F27513FDB7550096E5FC /* Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soap.h; sourceTree = "<group>"; };
+		7B84F27613FDB7550096E5FC /* Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soap.m; sourceTree = "<group>"; };
+		7B84F27713FDB7550096E5FC /* SoapArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArray.h; sourceTree = "<group>"; };
+		7B84F27813FDB7550096E5FC /* SoapArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArray.m; sourceTree = "<group>"; };
+		7B84F27913FDB7550096E5FC /* SoapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDelegate.h; sourceTree = "<group>"; };
+		7B84F27A13FDB7550096E5FC /* SoapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDictionary.h; sourceTree = "<group>"; };
+		7B84F27B13FDB7550096E5FC /* SoapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDictionary.m; sourceTree = "<group>"; };
+		7B84F27C13FDB7550096E5FC /* SoapFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapFault.h; sourceTree = "<group>"; };
+		7B84F27D13FDB7550096E5FC /* SoapFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapFault.m; sourceTree = "<group>"; };
+		7B84F27E13FDB7550096E5FC /* SoapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapHandler.h; sourceTree = "<group>"; };
+		7B84F27F13FDB7550096E5FC /* SoapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapHandler.m; sourceTree = "<group>"; };
+		7B84F28013FDB7550096E5FC /* SoapLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapLiteral.h; sourceTree = "<group>"; };
+		7B84F28113FDB7550096E5FC /* SoapLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapLiteral.m; sourceTree = "<group>"; };
+		7B84F28213FDB7550096E5FC /* SoapNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapNil.h; sourceTree = "<group>"; };
+		7B84F28313FDB7550096E5FC /* SoapNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapNil.m; sourceTree = "<group>"; };
+		7B84F28413FDB7550096E5FC /* SoapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapObject.h; sourceTree = "<group>"; };
+		7B84F28513FDB7550096E5FC /* SoapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapObject.m; sourceTree = "<group>"; };
+		7B84F28613FDB7550096E5FC /* SoapParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapParameter.h; sourceTree = "<group>"; };
+		7B84F28713FDB7550096E5FC /* SoapParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapParameter.m; sourceTree = "<group>"; };
+		7B84F28813FDB7550096E5FC /* SoapReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapReachability.h; sourceTree = "<group>"; };
+		7B84F28913FDB7550096E5FC /* SoapReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapReachability.m; sourceTree = "<group>"; };
+		7B84F28A13FDB7550096E5FC /* SoapRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequest.h; sourceTree = "<group>"; };
+		7B84F28B13FDB7550096E5FC /* SoapRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequest.m; sourceTree = "<group>"; };
+		7B84F28C13FDB7550096E5FC /* SoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapService.h; sourceTree = "<group>"; };
+		7B84F28D13FDB7550096E5FC /* SoapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapService.m; sourceTree = "<group>"; };
+		7B84F29D13FDB7630096E5FC /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		7B84F29E13FDB7630096E5FC /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		7B84F29F13FDB7630096E5FC /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		7B84F2A013FDB7630096E5FC /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		7B84F2A113FDB7630096E5FC /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		7B84F2A213FDB7630096E5FC /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		7B84F2A313FDB7630096E5FC /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		7B84F2A413FDB7630096E5FC /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		7B84F2A513FDB7630096E5FC /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		7B84F2A613FDB7630096E5FC /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		7B84F2A713FDB7630096E5FC /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		7B84F2A813FDB7630096E5FC /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		7B84F2A913FDB7630096E5FC /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		7B84F2B613FDB81C0096E5FC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7B937D531400274F00A91B9D /* byjg_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = byjg_logo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B84F23B13FDB6FF0096E5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B84F2B713FDB81C0096E5FC /* SystemConfiguration.framework in Frameworks */,
+				7B84F24313FDB6FF0096E5FC /* UIKit.framework in Frameworks */,
+				7B84F24513FDB6FF0096E5FC /* Foundation.framework in Frameworks */,
+				7B84F24713FDB6FF0096E5FC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B84F23313FDB6FF0096E5FC = {
+			isa = PBXGroup;
+			children = (
+				7B84F26213FDB71F0096E5FC /* Classes */,
+				7B84F24813FDB6FF0096E5FC /* byJG */,
+				7B84F24113FDB6FF0096E5FC /* Frameworks */,
+				7B84F23F13FDB6FF0096E5FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B84F23F13FDB6FF0096E5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F23E13FDB6FF0096E5FC /* byJG.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B84F24113FDB6FF0096E5FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F2B613FDB81C0096E5FC /* SystemConfiguration.framework */,
+				7B84F24213FDB6FF0096E5FC /* UIKit.framework */,
+				7B84F24413FDB6FF0096E5FC /* Foundation.framework */,
+				7B84F24613FDB6FF0096E5FC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B84F24813FDB6FF0096E5FC /* byJG */ = {
+			isa = PBXGroup;
+			children = (
+				7B937D531400274F00A91B9D /* byjg_logo.png */,
+				7B6DCCF613FE8BA0003F250F /* byjg.png */,
+				7B84F25113FDB6FF0096E5FC /* byJGAppDelegate.h */,
+				7B84F25213FDB6FF0096E5FC /* byJGAppDelegate.m */,
+				7B84F25413FDB6FF0096E5FC /* MainWindow.xib */,
+				7B84F25713FDB6FF0096E5FC /* byJGViewController.h */,
+				7B84F25813FDB6FF0096E5FC /* byJGViewController.m */,
+				7B84F25A13FDB6FF0096E5FC /* byJGViewController.xib */,
+				7B84F24913FDB6FF0096E5FC /* Supporting Files */,
+			);
+			path = byJG;
+			sourceTree = "<group>";
+		};
+		7B84F24913FDB6FF0096E5FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F24A13FDB6FF0096E5FC /* byJG-Info.plist */,
+				7B84F24B13FDB6FF0096E5FC /* InfoPlist.strings */,
+				7B84F24E13FDB6FF0096E5FC /* main.m */,
+				7B84F25013FDB6FF0096E5FC /* byJG-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B84F26213FDB71F0096E5FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F29C13FDB7630096E5FC /* TouchXML */,
+				7B84F27013FDB7550096E5FC /* Soap */,
+				7B84F26313FDB7490096E5FC /* Generated */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7B84F26313FDB7490096E5FC /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F26413FDB7490096E5FC /* Soap+Prefix.h */,
+				7B84F26513FDB7490096E5FC /* Soap+Prefix.m */,
+				7B84F26613FDB7490096E5FC /* WSCEPArrayOfstring.h */,
+				7B84F26713FDB7490096E5FC /* WSCEPArrayOfstring.m */,
+				7B84F26813FDB7490096E5FC /* WSCEPCEPService.h */,
+				7B84F26913FDB7490096E5FC /* WSCEPCEPService.m */,
+				7B84F26A13FDB7490096E5FC /* WSCEPServices.h */,
+				7B84F26B13FDB7490096E5FC /* WSCEPServices.m */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		7B84F27013FDB7550096E5FC /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F27113FDB7550096E5FC /* NSData+Base64.h */,
+				7B84F27213FDB7550096E5FC /* NSData+Base64.m */,
+				7B84F27313FDB7550096E5FC /* NSMutableArray+Soap.h */,
+				7B84F27413FDB7550096E5FC /* NSMutableArray+Soap.m */,
+				7B84F27513FDB7550096E5FC /* Soap.h */,
+				7B84F27613FDB7550096E5FC /* Soap.m */,
+				7B84F27713FDB7550096E5FC /* SoapArray.h */,
+				7B84F27813FDB7550096E5FC /* SoapArray.m */,
+				7B84F27913FDB7550096E5FC /* SoapDelegate.h */,
+				7B84F27A13FDB7550096E5FC /* SoapDictionary.h */,
+				7B84F27B13FDB7550096E5FC /* SoapDictionary.m */,
+				7B84F27C13FDB7550096E5FC /* SoapFault.h */,
+				7B84F27D13FDB7550096E5FC /* SoapFault.m */,
+				7B84F27E13FDB7550096E5FC /* SoapHandler.h */,
+				7B84F27F13FDB7550096E5FC /* SoapHandler.m */,
+				7B84F28013FDB7550096E5FC /* SoapLiteral.h */,
+				7B84F28113FDB7550096E5FC /* SoapLiteral.m */,
+				7B84F28213FDB7550096E5FC /* SoapNil.h */,
+				7B84F28313FDB7550096E5FC /* SoapNil.m */,
+				7B84F28413FDB7550096E5FC /* SoapObject.h */,
+				7B84F28513FDB7550096E5FC /* SoapObject.m */,
+				7B84F28613FDB7550096E5FC /* SoapParameter.h */,
+				7B84F28713FDB7550096E5FC /* SoapParameter.m */,
+				7B84F28813FDB7550096E5FC /* SoapReachability.h */,
+				7B84F28913FDB7550096E5FC /* SoapReachability.m */,
+				7B84F28A13FDB7550096E5FC /* SoapRequest.h */,
+				7B84F28B13FDB7550096E5FC /* SoapRequest.m */,
+				7B84F28C13FDB7550096E5FC /* SoapService.h */,
+				7B84F28D13FDB7550096E5FC /* SoapService.m */,
+			);
+			path = Soap;
+			sourceTree = "<group>";
+		};
+		7B84F29C13FDB7630096E5FC /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				7B84F29D13FDB7630096E5FC /* CXMLDocument.h */,
+				7B84F29E13FDB7630096E5FC /* CXMLDocument.m */,
+				7B84F29F13FDB7630096E5FC /* CXMLDocument_PrivateExtensions.h */,
+				7B84F2A013FDB7630096E5FC /* CXMLDocument_PrivateExtensions.m */,
+				7B84F2A113FDB7630096E5FC /* CXMLElement.h */,
+				7B84F2A213FDB7630096E5FC /* CXMLElement.m */,
+				7B84F2A313FDB7630096E5FC /* CXMLNode.h */,
+				7B84F2A413FDB7630096E5FC /* CXMLNode.m */,
+				7B84F2A513FDB7630096E5FC /* CXMLNode_PrivateExtensions.h */,
+				7B84F2A613FDB7630096E5FC /* CXMLNode_PrivateExtensions.m */,
+				7B84F2A713FDB7630096E5FC /* CXMLNode_XPathExtensions.h */,
+				7B84F2A813FDB7630096E5FC /* CXMLNode_XPathExtensions.m */,
+				7B84F2A913FDB7630096E5FC /* TouchXML.h */,
+			);
+			path = TouchXML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B84F23D13FDB6FF0096E5FC /* byJG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B84F25F13FDB6FF0096E5FC /* Build configuration list for PBXNativeTarget "byJG" */;
+			buildPhases = (
+				7B84F23A13FDB6FF0096E5FC /* Sources */,
+				7B84F23B13FDB6FF0096E5FC /* Frameworks */,
+				7B84F23C13FDB6FF0096E5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = byJG;
+			productName = byJG;
+			productReference = 7B84F23E13FDB6FF0096E5FC /* byJG.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B84F23513FDB6FF0096E5FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7B84F23813FDB6FF0096E5FC /* Build configuration list for PBXProject "byJG" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B84F23313FDB6FF0096E5FC;
+			productRefGroup = 7B84F23F13FDB6FF0096E5FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B84F23D13FDB6FF0096E5FC /* byJG */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B84F23C13FDB6FF0096E5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B84F24D13FDB6FF0096E5FC /* InfoPlist.strings in Resources */,
+				7B84F25613FDB6FF0096E5FC /* MainWindow.xib in Resources */,
+				7B84F25C13FDB6FF0096E5FC /* byJGViewController.xib in Resources */,
+				7B6DCCF713FE8BA0003F250F /* byjg.png in Resources */,
+				7B937D541400274F00A91B9D /* byjg_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B84F23A13FDB6FF0096E5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B84F24F13FDB6FF0096E5FC /* main.m in Sources */,
+				7B84F25313FDB6FF0096E5FC /* byJGAppDelegate.m in Sources */,
+				7B84F25913FDB6FF0096E5FC /* byJGViewController.m in Sources */,
+				7B84F26C13FDB7490096E5FC /* Soap+Prefix.m in Sources */,
+				7B84F26D13FDB7490096E5FC /* WSCEPArrayOfstring.m in Sources */,
+				7B84F26E13FDB7490096E5FC /* WSCEPCEPService.m in Sources */,
+				7B84F26F13FDB7490096E5FC /* WSCEPServices.m in Sources */,
+				7B84F28E13FDB7550096E5FC /* NSData+Base64.m in Sources */,
+				7B84F28F13FDB7550096E5FC /* NSMutableArray+Soap.m in Sources */,
+				7B84F29013FDB7550096E5FC /* Soap.m in Sources */,
+				7B84F29113FDB7550096E5FC /* SoapArray.m in Sources */,
+				7B84F29213FDB7550096E5FC /* SoapDictionary.m in Sources */,
+				7B84F29313FDB7550096E5FC /* SoapFault.m in Sources */,
+				7B84F29413FDB7550096E5FC /* SoapHandler.m in Sources */,
+				7B84F29513FDB7550096E5FC /* SoapLiteral.m in Sources */,
+				7B84F29613FDB7550096E5FC /* SoapNil.m in Sources */,
+				7B84F29713FDB7550096E5FC /* SoapObject.m in Sources */,
+				7B84F29813FDB7550096E5FC /* SoapParameter.m in Sources */,
+				7B84F29913FDB7550096E5FC /* SoapReachability.m in Sources */,
+				7B84F29A13FDB7550096E5FC /* SoapRequest.m in Sources */,
+				7B84F29B13FDB7550096E5FC /* SoapService.m in Sources */,
+				7B84F2AA13FDB7630096E5FC /* CXMLDocument.m in Sources */,
+				7B84F2AB13FDB7630096E5FC /* CXMLDocument_PrivateExtensions.m in Sources */,
+				7B84F2AC13FDB7630096E5FC /* CXMLElement.m in Sources */,
+				7B84F2AD13FDB7630096E5FC /* CXMLNode.m in Sources */,
+				7B84F2AE13FDB7630096E5FC /* CXMLNode_PrivateExtensions.m in Sources */,
+				7B84F2AF13FDB7630096E5FC /* CXMLNode_XPathExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7B84F24B13FDB6FF0096E5FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B84F24C13FDB6FF0096E5FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B84F25413FDB6FF0096E5FC /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B84F25513FDB6FF0096E5FC /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7B84F25A13FDB6FF0096E5FC /* byJGViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B84F25B13FDB6FF0096E5FC /* en */,
+			);
+			name = byJGViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B84F25D13FDB6FF0096E5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7B84F25E13FDB6FF0096E5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B84F26013FDB6FF0096E5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "byJG/byJG-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "byJG/byJG-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B84F26113FDB6FF0096E5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "byJG/byJG-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "byJG/byJG-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B84F23813FDB6FF0096E5FC /* Build configuration list for PBXProject "byJG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B84F25D13FDB6FF0096E5FC /* Debug */,
+				7B84F25E13FDB6FF0096E5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B84F25F13FDB6FF0096E5FC /* Build configuration list for PBXNativeTarget "byJG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B84F26013FDB6FF0096E5FC /* Debug */,
+				7B84F26113FDB6FF0096E5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B84F23513FDB6FF0096E5FC /* Project object */;
+}

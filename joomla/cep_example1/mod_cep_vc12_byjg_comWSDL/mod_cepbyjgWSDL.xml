@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="module" version="1.5">
+	<name>Buscar Endereço ByJG WSDL</name>
+	<author>Caratti e Mafra</author>
+	<creationDate>Abril de 2010</creationDate>
+	<copyright>(C) 2010</copyright>
+	<license>Livre</license>
+	<authorEmail>ricardo@caratti.eti.br</authorEmail>
+	<authorUrl>www.caratti.eti.br</authorUrl>
+	<version>1.5.12</version>
+	<description> 
+		Este módulo ilustra o uso de Web Service de consulta por CEP provido pela ByJG (www.byjg.com.br).
+        Esta versão utiliza WSDL.
+	</description>
+	<files>
+		<filename module="mod_cepbyjgWSDL">mod_cepbyjgWSDL.php</filename>
+	</files>
+	<params>
+		<param 	name="wsdl" type="text" default="http://www.byjg.com.br/site/webservice.php/ws/cep?WSDL" 
+				label="URL para WSDL do serviço." 
+				description="Endereço WSDL do Serviço Web"/>
+		<param 	name="usa_autenticacao" type="radio" default="1"
+				label="Opção com autenticação?" 
+				description="Responda Sim se você for registrado ou Não caso contrário">
+				<option value="0">Não</option>
+				<option value="1">Sim</option>
+		</param>		
+		<param 	name="usuario" type="text" default="joomla" 
+				label="Usuário" 
+				description="Nome do usuário"/>		
+		<param 	name="senha" type="password" default="avancado" 
+				label="Senha" 
+				description="Senha do usuário"/>				
+		
+	</params>
+</install>
