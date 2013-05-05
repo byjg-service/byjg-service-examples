@@ -1,0 +1,41 @@
+' Agradecimentos a Jorge Barros
+' Requer o SOAP Tool Kit instalado e associado ao projeto.
+
+Private Sub Command1_Click()
+	Dim webService As New SoapClient30, Retorno As String
+
+	If txtCEP.Text = "" Or Len(txtCEP.Text) < 7 Then
+	   MsgBox "CEP invádo!"
+	   txtCEP.SetFocus
+	   Exit Sub
+	End If
+
+	'
+	'Seta o site que provem o serviçde webservice
+	'
+	webService.MSSoapInit ("http://www.byjg.com.br/site/webservice.php/ws/cep?WSDL")
+
+	'
+	'string[] obterCEPAuth(string Logradouro, string Localidade, string UF,Usuario,Senha)
+	'Devolve uma lista de CEP àartir de um nome ou parte do nome de um Logradouro. Apenas os 20 primeiros endereç sãretornados. Com o objetivo de se obter uma lista mais precisa possíl, foram acrescentados os parâtros Localidade e UF. Agradecimentos a Paulo Santana pela sugestã	'
+	'string obterLogradouro(string CEP)
+	'Devolve o nome do Logradouro àartir do CEP fornecido no formato 00000-000 ou 00000000.
+	'
+	'string obterVersao()
+	'Devolve informaçs sobre a versãdo serviçde CEP.
+	'
+	Retorno = webService.obterLogradouroAuth(txtCEP.Text, Usuario, Senha)
+
+
+	'
+	'Imprime o retorno da web
+	'
+	Text1.Text = Retorno
+
+End Sub
+
+
+Private Sub txtCEP_KeyPress(KeyAscii As Integer)
+	If InStr(1, "0123456789" & vbKeyDelete & Chr(8), Chr(KeyAscii)) = 0 Then KeyAscii = 0
+End Sub
+

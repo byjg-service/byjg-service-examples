@@ -1,0 +1,17 @@
+******************** SÃO PAULO - 21/07/2010  ***********************
+*
+* Exemplo desenvolvido por: ARIDELSON BENEVENUTO
+*
+* Com base no exemplo anterior em VB6, por: JORGE BARROS
+*
+* -----------------------------------------------------
+
+REQUERIMENTOS
+--------------
+
+1 - Instalar o SOAP Tool Kit, que esta junto com este exemplo: soapsdk.exe
+
+2 - Associar ao projeto o componente anteriormente instalado: Microsoft Soap Type Library
+
+3 - Criar e "VALIDAR" uma conta no site: http://www.byjg.com.br
+
