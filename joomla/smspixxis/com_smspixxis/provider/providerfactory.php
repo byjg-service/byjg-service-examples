@@ -79,7 +79,7 @@ class ProviderFactory
    				continue;
    			}
    			
-   			if( !eregi( "pixxis.provider.*.php", $entry ) )
+   			if( !preg_match( "/pixxis\.provider\.(.*)\.php/", $entry ) )
    			{
    				continue;
    			}
