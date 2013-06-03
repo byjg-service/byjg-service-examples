@@ -95,7 +95,7 @@ class PixxisToolBar
 			return;
 		}
 
-		call_user_method( $method, $this );
+		call_user_func( array( $this, $method ) );
 	}
 
 	/**
