@@ -19,7 +19,7 @@
  */
 function enviarSMS($ddd, $celular, $mensagem, $username, $password)
 {	
-	$url = "http://www.byjg.com.br/xmlnuke-php/webservice.php/ws/sms?httpmethod=enviarsms";
+	$url = "http://www.byjg.com.br/site/webservice.php/ws/sms?httpmethod=enviarsms";
 	$url .=	"&ddd=" . urlencode($ddd);
 	$url .=	"&celular=" . urlencode($celular);
 	$url .=	"&mensagem=" . urlencode(utf8_encode($mensagem));

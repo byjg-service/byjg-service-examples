@@ -22,7 +22,7 @@ function enviarSMS($ddd, $celular, $mensagem, $username, $password)
 	// Definindo o webservice
 	$client = new SoapClient(NULL,
 	array(
-		"location" => "http://www.byjg.com.br/xmlnuke-php/webservice.php/ws/sms",
+		"location" => "http://www.byjg.com.br/site/webservice.php/ws/sms",
 		"uri"      => "urn:xmethods-delayed-quotes",
 		"style"    => SOAP_RPC,
 		"use"      => SOAP_ENCODED
