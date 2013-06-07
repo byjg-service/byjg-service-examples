@@ -98,7 +98,7 @@ public class SMSService extends ByJGBaseWebService {
 		HashMap<String, String> params = new HashMap<String, String>();
 		String strLista = "";
 		for (Object telefone : lista) {
-			strLista += (strLista.length() > 0 ? "," : "") + telefone.toString();
+			strLista += (strLista.length() > 0 ? "|" : "") + telefone.toString();
 		}
 		params.put("lista", strLista);
 		params.put("mensagem", mensagem);
