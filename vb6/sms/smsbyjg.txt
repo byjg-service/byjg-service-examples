@@ -1,0 +1,61 @@
+
+
+
+Function RequestURL(Method As String, Dict As Dictionary) As String	
+	Dim QueryString as String
+	
+	Dim Key As Variant
+	
+	For Each key In Dic.Keys
+        QueryString = QueryString & key & "=" & oParams(key) & "&"
+    Next key	
+	
+	Dim oHTTP As WinHttp.WinHttpRequest
+	Set oHTTP = new WinHttp.WinHttpRequest
+
+	oHTTP.Open "GET", "http://www.byjg.com.br/ws/sms?httpmethod=" & Method & "?" & QueryString
+    oHTTP.Send
+	
+    RequestURL = oHTTP.ResponseText
+End Function
+
+
+Function EnviarSMS(Ddd as String, Celular as String, Mensagem as String, Usuario as String, Senha as String)
+
+	Dim Dict As Dictionary
+	Set Dict = new Dictionary
+	
+	Dict.Add "ddd", Ddd
+	Dict.Add "celular", Celular
+	Dict.Add "mensagem", Mensagem
+	Dict.Add "usuario", Usuario
+	Dict.Add "senha", Senha
+
+	Dim Result As String
+	Result = RequestURL( "enviarsms", Dict )
+	
+	' Result pode ser
+	'	OK|mensagem
+	'	ERR|mensagem
+
+End Function
+
+
+Function Creditos(Usuario as String, Senha as String)
+
+	Dim Dict As Dictionary
+	Set Dict = new Dictionary
+	
+	Dict.Add "usuario", Usuario
+	Dict.Add "senha", Senha
+
+	Dim Result As String
+	Result = RequestURL( "creditos", Dict )
+	
+	' Result pode ser
+	'	OK|400, Usuário ou senha inválidos
+	'	OK|ARRAY|1|100,2020/09/08
+	'	OK|ARRAY|2|100,2020/09/08|58,2013/08/30
+	
+End Function
+
