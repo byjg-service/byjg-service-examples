@@ -59,7 +59,7 @@ class PixxisBackendHtml
 
 function showUser($rows, $PixxisRows, $pageNav)
 {
-	global $option;
+	$option = JRequest::getCmd('option');
 	?>
 <style type="text/css">
 <!--
@@ -71,7 +71,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 -->
 </style>
 
-    <form action="index2.php" method="post" name="adminForm">
+    <form action="index.php" method="post" name="adminForm">
 
 		<table class="adminheading">
 		<tr>
@@ -157,7 +157,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 
  function showCredits()
  { 	
-    global $option;
+    $option = JRequest::getCmd('option');
 ?>
     <table class="adminheading">
            <tr>
@@ -171,7 +171,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 			<div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=provider" >
+						<a href="index.php?option=com_pixxis&amp;act=provider" >
 								<img alt="<?php echo JText::_( 'PIXXIS_PROVIDER_ADMIN' );?>" src="images/browser.png" alt="Provider" align="middle" name="image" border="0"/><br/>
 							<?php echo JText::_( 'PIXXIS_PROVIDER_ADMIN' );?>
 					  </a>
@@ -183,7 +183,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 			<div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=user">
+						<a href="index.php?option=com_pixxis&amp;act=user">
 								<img alt="<?php echo JText::_( 'PIXXIS_USER_ADMIN' ) ;?>" src="images/addusers.png" alt="Manage User" align="middle" name="image" border="0" /><br/>
 							<?php echo JText::_( 'PIXXIS_USER_ADMIN' );?> </a>
 				  </div>
@@ -193,7 +193,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 			<div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=ad">
+						<a href="index.php?option=com_pixxis&amp;act=ad">
 								<img alt="<?php echo JText::_('PIXXIS_ADVERTISMENT' ); ?>" src="images/addedit.png" align="middle" name="image" border="0" /><br/>
 							<?php echo JText::_('PIXXIS_ADVERTISMENT' ); ?> </a>
 				  </div>
@@ -203,7 +203,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 			<div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=global">
+						<a href="index.php?option=com_pixxis&amp;act=global">
 							<div class="iconimage">
 								<img  alt="<?php echo JText::_( 'PIXXIS_GLOBAL_SETTINGS' ); ?>" src="images/impressions.png" align="middle" name="image" border="0" />
 							</div>
@@ -214,7 +214,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 			<div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=about">
+						<a href="index.php?option=com_pixxis&amp;act=about">
 							<div class="iconimage">
 								<img alt="<?php echo JText::_( 'PIXXIS_SHOW_ABOUT' ); ?>" src="images/install.png" align="middle" name="image" border="0" />
 							</div>
@@ -225,7 +225,7 @@ function showUser($rows, $PixxisRows, $pageNav)
 		  <div id="cpanel">
 				<div style="float:left;">
 					<div class="icon">
-						<a href="index2.php?option=com_pixxis&amp;act=prereq">
+						<a href="index.php?option=com_pixxis&amp;act=prereq">
 							<div class="iconimage">
 								<img alt="<?php echo JText::_( 'PIXXIS_PREREQ_CHECK' ); ?>" src="images/systeminfo.png" align="middle" name="image" border="0" />
 							</div>
@@ -259,10 +259,10 @@ function showUser($rows, $PixxisRows, $pageNav)
 **/
 function editUser(&$row, &$PixxisRow)
   {
-    global $option;
+    $option = JRequest::getCmd('option');
 
   ?>
-              <form action="index2.php" method="post" name="adminForm">
+              <form action="index.php" method="post" name="adminForm">
 
 		<table class="adminheading">
 		<tr>
@@ -326,9 +326,9 @@ function editUser(&$row, &$PixxisRow)
 **/
 function showAdvertisment(&$ad)
   {
-    global $option;
+    $option = JRequest::getCmd('option');
   ?>
-   <form action="index2.php" method="post" name="adminForm">
+   <form action="index.php" method="post" name="adminForm">
 
 	 <table class="adminheading">
 	<tr>
@@ -376,9 +376,9 @@ function showAdvertisment(&$ad)
 **/
 function showProviderSelectPanel(&$rows)
 {
-      global $option;
+      $option = JRequest::getCmd('option');
 ?>
-        <form action="index2.php" method="post" name="adminForm">
+        <form action="index.php" method="post" name="adminForm">
           <table class="adminheading">
 		<tr>
 	 	    <th class="edit" rowspan="2" nowrap="nowrap">Administrar Provedor<br /></th>
@@ -473,9 +473,9 @@ function showProviderSelectPanel(&$rows)
 function editProvider(&$row, &$provider)
   {
 
-    global $option;
+    $option = JRequest::getCmd('option');
   ?>
-     <form action="index2.php" method="post" name="adminForm">
+     <form action="index.php" method="post" name="adminForm">
 
 		<table class="adminheading">
 		<tr>
@@ -567,9 +567,9 @@ function editProvider(&$row, &$provider)
 
 function showLoadPanel(&$cid)
  {
-    global $option;
+    $option = JRequest::getCmd('option');
 ?>
-        <form action="index2.php" method="post" name="adminForm">
+        <form action="index.php" method="post" name="adminForm">
 
 		<table class="adminheading">
 		<tr>
@@ -644,9 +644,9 @@ function showLoadPanel(&$cid)
 
 function showGlobal( $config )
 {
-	global $option;
+	$option = JRequest::getCmd('option');
 ?>
-        <form action="index2.php" method="post" name="adminForm">
+        <form action="index.php" method="post" name="adminForm">
 			<table class="adminheading">
 				<tr>
 					<th class="edit" rowspan="2" nowrap="nowrap"><?php echo JText::_( 'PIXXIS_GLOBAL_CONFIG' ); ?></th>

@@ -34,7 +34,10 @@ define( 'PIXXIS_FRONTEND_PIXXIS_PHP', 1 );
 @session_start();
 
 //setup correct language, and get all needed globals
-global $option, $Itemid, $mainframe;
+global $Itemid;
+
+$mainframe =& JFactory::getApplication();
+$option = JRequest::getCmd('option');
 
 $frontend_path = dirname( __FILE__ ) . '/';
 $backend_path  = dirname( __FILE__ ) .'/../../administrator/components/com_pixxis/';

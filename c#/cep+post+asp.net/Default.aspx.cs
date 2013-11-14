@@ -14,14 +14,14 @@ public partial class _Default : System.Web.UI.Page
     }
 
     //Enviando SMS com POST no evento Click do button Enviar
-    protected void btnEnviar_Click(object sender, EventArgs e)
+    protected void btnLogradouro_Click(object sender, EventArgs e)
     {
         //Chamando o método EnviaSMS
-        EnviaSMS();
+        obterLogradouro();
     }
 
     //Método para enviar SMS
-    private void EnviaSMS()
+    private void obterLogradouro()
     {
         //Informe seu nome de usúario
         string usuario = "meuUsuario";
@@ -29,9 +29,7 @@ public partial class _Default : System.Web.UI.Page
         string senha = "minhaSenha";
 
         ASCIIEncoding encoding = new ASCIIEncoding();
-        string parametros = "ddd=" + txtddd.Text;
-        parametros += ("&celular=" + txtNumero.Text);
-        parametros += ("&mensagem=" + txtMensagem.Text);
+        string parametros = "cep=" + txtCep.Text;
         parametros += ("&usuario=" + usuario);
         parametros += ("&senha=" + senha);
 
@@ -39,34 +37,42 @@ public partial class _Default : System.Web.UI.Page
         // Preparando web request...
         StreamWriter myWriter = null;
 
-        //Informando o método httpmethod=enviarsms                                             
-        HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create("http://www.byjg.com.br/site/webservice.php/ws/sms?httpmethod=enviarsms");
+        // Informando o método httpmethod=obterlogradouroauth
+		// 
+		// Uma lista de outros métodos e parametros pode ser obtida em: 
+		// http://www.byjg.com.br/site/webservice.php/ws/cep
+        HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create("http://www.byjg.com.br/site/webservice.php/ws/cep?httpmethod=obterlogradouroauth");
+	    //myRequest.Proxy = new System.Net.WebProxy(ProxyString, true);
 
-        //Informando o POST ao método
+		//Informando o POST ao método
         myRequest.Method = "POST";
         myRequest.ContentType = "application/x-www-form-urlencoded";
-        myRequest.ContentLength = parametros.Length;
+	    byte [] bytes = System.Text.Encoding.ASCII.GetBytes(parametros);
+        myRequest.ContentLength = bytes.Length;
+
+		var result = "";
 
         try
         {
-            myWriter = new StreamWriter(myRequest.GetRequestStream());
+			System.IO.Stream os = myRequest.GetRequestStream ();
+			os.Write (bytes, 0, bytes.Length); 
+			os.Close ();
 
-            // Envia os parametros
-            myWriter.Write(parametros);
-
-        }
-        catch (Exception)
+			System.Net.WebResponse resp = myRequest.GetResponse();
+			if (resp== null) 
+				result = "Sem resposta do servidor";
+			else
+			{
+				System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+				result = sr.ReadToEnd().Trim();
+			}
+		}
+        catch (Exception ex)
         {
+			result = ex.Message;
+        }
 
-            throw;
-        }
-        finally
-        {
-            myWriter.Close();
-            txtddd.Text = string.Empty;
-            txtNumero.Text = string.Empty;
-            txtMensagem.Text = string.Empty;
-            lblRetorno.Text = "Mensagem enviada com sucesso!";
-        }
+		txtCep.Text = string.Empty;
+        lblRetorno.Text = result;
     }
 }

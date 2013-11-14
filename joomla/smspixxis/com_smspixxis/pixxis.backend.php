@@ -253,7 +253,7 @@ class PixxisBackend
       $sql = "UPDATE #__pixxis_provider SET params='$str',active='1' WHERE id=$id";
       $this->ExecuteSql( $sql );
 
-      PixxisRedirect( 'index2.php?option=com_pixxis&act=provider', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+      PixxisRedirect( 'index.php?option=com_pixxis&act=provider', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -263,7 +263,7 @@ class PixxisBackend
    */
   function DoProviderCancel()
   {
-    PixxisRedirect( 'index2.php?option=com_pixxis' );
+    PixxisRedirect( 'index.php?option=com_pixxis' );
   }
 
   /**
@@ -281,7 +281,8 @@ class PixxisBackend
    */
   function DoUserDefault()
   {
-       global $mainframe, $option;
+	  $mainframe = &JFactory::getApplication();
+	  $option = JRequest::getCmd('option');
 
        $sql = "SELECT COUNT(*) AS COUNTER FROM #__users";
 	   $this->ExecuteSql( $sql );
@@ -329,7 +330,7 @@ class PixxisBackend
 		$this->ExecuteSql( $sql );
       }
 
-       PixxisRedirect( 'index2.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+       PixxisRedirect( 'index.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -345,7 +346,7 @@ class PixxisBackend
 
       $sql = "UPDATE #__pixxis_joomlauser SET state=0 WHERE userid IN( " . implode( ',', $this->cid ) . ")";
 	  $this->ExecuteSql( $sql );
-      PixxisRedirect( 'index2.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+      PixxisRedirect( 'index.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -398,7 +399,7 @@ class PixxisBackend
       $sql = "UPDATE #__pixxis_joomlauser SET number='$number', comment='$comment', credits='$credits' WHERE userid=$id";
 	  $this->ExecuteSql( $sql );
 
-	  PixxisRedirect( 'index2.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+	  PixxisRedirect( 'index.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -406,7 +407,7 @@ class PixxisBackend
    */
   function DoUserCancel()
   {
-  	PixxisRedirect( 'index2.php?option=com_pixxis' );
+  	PixxisRedirect( 'index.php?option=com_pixxis' );
   }
 
   /**
@@ -425,7 +426,7 @@ class PixxisBackend
 	$credits = JRequest::getVar( 'credits', -1 );
 	$sql = "UPDATE #__pixxis_joomlauser SET credits=$credits WHERE userid IN (" . implode(',',$this->cid) . ")";
 	$this->ExecuteSql( $sql );
-	PixxisRedirect( 'index2.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+	PixxisRedirect( 'index.php?option=com_pixxis&act=user', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -476,7 +477,7 @@ class PixxisBackend
 
       $this->ExecuteSql( $sql );
 
-      PixxisRedirect( 'index2.php?option=com_pixxis', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+      PixxisRedirect( 'index.php?option=com_pixxis', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -484,7 +485,7 @@ class PixxisBackend
    */
   function DoAdCancel()
   {
-  	PixxisRedirect( 'index2.php?option=com_pixxis' );
+  	PixxisRedirect( 'index.php?option=com_pixxis' );
   }
 
   /**
@@ -538,7 +539,7 @@ class PixxisBackend
 		$this->ExecuteSql( $sql );
 	}
 
-	 PixxisRedirect( 'index2.php?option=com_pixxis&act=global', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
+	 PixxisRedirect( 'index.php?option=com_pixxis&act=global', JText::_( 'PIXXIS_CHANGES_SAVED' ) );
   }
 
   /**
@@ -555,7 +556,7 @@ class PixxisBackend
    */
   function DoGlobalCancel()
   {
-	 PixxisRedirect( 'index2.php?option=com_pixxis' );
+	 PixxisRedirect( 'index.php?option=com_pixxis' );
   }
 
   /**

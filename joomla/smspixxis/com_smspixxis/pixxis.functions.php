@@ -34,7 +34,7 @@ define( 'PIXXIS_BACKEND_FUNCTIONS_PHP', 1 );
 
 function PixxisRedirect( $url, $msg )
 {
-	global $mainframe;
+	$mainframe = &JFactory::getApplication();
 	$mainframe->redirect( $url, $msg );
 	die;
 }

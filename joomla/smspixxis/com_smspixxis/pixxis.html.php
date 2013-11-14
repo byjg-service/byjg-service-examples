@@ -839,7 +839,7 @@ function DeletePhoneBookEntries() {
 
 	<br />
 	<div id="exportphbook" style="overflow: hidden;padding:3px 0 10px;border-bottom:1px solid #ccc;">
-		<form action="index2.php" method="post" enctype="multipart/form-data">
+		<form action="index.php" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="no_html" value="1" />
 			<input type="hidden" name="option" value="<?php echo $option; ?>" />
 			<input type="hidden" name="Itemid" value="<?php echo $Itemid; ?>" />
